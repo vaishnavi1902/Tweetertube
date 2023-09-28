@@ -1,0 +1,12 @@
+#footer {
+    background-color: var(--color-primary-variant);
+    color: var(--color-white);
+    padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}
+.heading-footer {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}

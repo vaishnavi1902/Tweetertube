@@ -2,7 +2,7 @@
 
 const Contact = () => {
   return (
-    <section>Contact</section>
+    <section className="container" id="contact">Contact</section>
   )
 }
 

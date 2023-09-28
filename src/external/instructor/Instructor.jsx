@@ -2,7 +2,7 @@
 
 export const Instructor = () => {
   return (
-    <section>
+    <section className="container" id="instructor"> 
       Instructor
     </section>
   )

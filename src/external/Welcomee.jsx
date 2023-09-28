@@ -1,7 +1,7 @@
 
 const Welcomee = () => {
   return (
-    <section>Welcomee</section>
+    <section className="container" id="welcome">Welcomee</section>
   )
 }
 

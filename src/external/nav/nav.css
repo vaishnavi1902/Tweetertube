@@ -5,6 +5,11 @@
     padding: 0px 4rem;
     background-color: var(--color-primary-variant);
 }
+.topbar-email , .topbar-mobile{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
 .nav {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -34,19 +39,24 @@
 .navimg{
     width: 80px;
 }
-.homeli {
+#homeli {
     display: flex;
     align-items: center;
 }
-.homeli:hover .homeli.span {
+#homeli:hover .homeli.span {
     color: green;
 }
-.all-li{
+.all-li a{
     font-weight: 500;
     border-radius: 10px;
     padding: 0.5rem 1rem;
 }
-.all-li:hover {
+.all-li:hover a{
+    /* transition: var(--transition); */
+    /* color: blue; */
+    /* background-color: rgba(38, 0, 255, 0.326); */
+}
+.active {
     transition: var(--transition);
     color: var(--color-white);
     background-color: var(--color-bg-variant);
