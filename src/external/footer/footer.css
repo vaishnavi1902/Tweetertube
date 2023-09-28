@@ -5,8 +5,33 @@
     display: grid;
     grid-template-columns: 50% 25% 25%;
 }
-.heading-footer {
+.heading-footer{
     display: flex;
     gap: 6px;
     align-items: center;
+}
+.description {
+    padding:1rem 8rem 1rem 0;
+}
+.description p{
+    font-size: 14px;
+}
+.p-footer{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.footer-links{
+    padding:1rem 0;
+}
+.footer-links li a{
+    color: white;
+}
+.footer-links li a:hover{
+    color: var(--color-primary);
+}
+.footer .socials {
+    display: flex;
+    gap: 10px;
+    padding:1rem 0;
 }
