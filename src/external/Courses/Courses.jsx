@@ -2,7 +2,7 @@
 
 const Courses = () => {
   return (
-    <div>Courses</div>
+    <section>Courses</section>
   )
 }
 
