@@ -1,9 +1,10 @@
 import Home from './external/Home'
 const App = () => {
   return (
-    // <div>App</div>
-    <Home />
-  )
+    <>
+    <Home/>
+    </>
+  );
 }
 
 export default App
