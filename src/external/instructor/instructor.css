@@ -1,0 +1,188 @@
+/* first section */
+
+.linktag {
+    background-color: #e7e0f0e6;
+    padding: 10px;
+}
+
+.linktag .active:hover {
+    color: blue;
+}
+
+.linktag a {
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: small;
+}
+
+.bgimage {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url("../../assets/bg-1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    font-size: 26px;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; 
+    margin-left: 35px; 
+}
+
+.overlay h1 span {
+    color: blue;
+    text-transform: uppercase;
+}
+
+.overlay h1{
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.overlay .para1 {
+    font-size: 15px;
+    color: var(--color-white);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.teachcoursebtn {
+    background-color: blue;
+    color: var(--color-white);
+    text-transform: capitalize;
+    outline: transparent;
+    border: transparent;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px 70px;
+    border-radius: 4px;
+}
+
+.teachcoursebtn:hover {
+    background-color: var(--color-bg-variant);
+    color: var(--color-white);
+    transition: var(--transition);
+    border: 1px solid var(--color-bg);
+}
+
+/* second section */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #fcfafae6;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.grid-item {
+    padding: 15px;
+    font-size: medium;
+    text-align: center;
+}
+
+/* third section */
+
+.howto {
+    margin-top: 50px;
+}
+
+.howto .head1 h1 {
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+}
+ 
+.howto .head1 h1 span {
+    color: blue;
+}
+
+.tabs {
+    margin-top: 5px;
+}
+
+.tabs .irules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs .irules li {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.tabs .irules li h2:hover {
+    color: blue;
+}
+
+.content {
+    display: none;
+}
+
+.show-content {
+    display: block;
+    padding: 30px;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+
+
+/* fourth section */
+
+.teach1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(229, 230, 244);
+    margin-top: 50px;
+}
+
+.teachimg {
+    width: 50%;
+    padding: 100px 30px;
+}
+
+.teachimg img {
+    border-radius: 15px;
+}
+
+.teach2 {
+    padding: 80px 20px;
+
+}
+
+.teachnow h1 {
+    font-weight: 600;
+
+}
+
+.teachnow p {
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.teachnow .login {
+    padding-top: 30px;
+}
+
+.login .loginnow {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.login .loginnow:hover {
+    color: blue;
+}
