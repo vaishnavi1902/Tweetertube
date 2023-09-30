@@ -1,13 +1,17 @@
-// import { useState } from "react";
-// import "./instructor.css";
-// import bg2 from "../../assets/bg-2.webp";
+import { useState } from "react";
+import "./instructor.css";
+import bg2 from "../../assets/bg-2.webp";
 // import { BsCameraFill } from "react-icons/bs";
 // import { AiOutlineRight } from "react-icons/ai";
 
 const Instructor = () => {
+  const [toggle, setToggle] = useState(1);
 
+  function updateToggle(id) {
+    setToggle(id);
+  }
   return (
-<<<<<<<<< Temporary merge branch 1
+
     <>
       {/* first section */}
 
@@ -166,11 +170,3 @@ const Instructor = () => {
   );
 };
 export default Instructor;
-=========
-    <section className="container" id="instructor"> 
-      Instructor
-    </section>
-  )
-}
-export default Instructor
->>>>>>>>> Temporary merge branch 2
