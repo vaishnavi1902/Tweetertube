@@ -69,9 +69,13 @@
 .skiptranslate {
     /* display: none !important; */
 }
+
+.nav .icon {
+    display: none;
+  }
 /* ---------------medium devices-------------------- */
 
-@media screen and (max-width: 1024px){   
+@media screen and (max-width: 1025px){   
    .topbar{
     display: block;
     text-align: center;
@@ -81,10 +85,35 @@
     gap: 6px;
     justify-content: center;
     align-items: center;
-}
-.nav {
-    /* display: none; */
-}
+    }
+    .nav.responsive 
+    {
+        position: relative;
+    }
+    .nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav.responsive a , .nav.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .nav li:not(:first-child) 
+    {
+        display: none;
+    }
+    .nav li.icon {
+        color: black !important;
+        float: right;
+        display: block;
+    }
+    
+.nav .icon {
+    display: block;
+  }
+
 }
 
 
