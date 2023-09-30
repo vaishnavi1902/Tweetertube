@@ -24,7 +24,7 @@ const Nav = () => {
             <li className="all-li"><Link to="/contact" onClick={() => setActiveNav('#contact')}  className={activeNav === '#contact' ? 'active' : ''}>Contact</Link></li>
         </div>
         <div>
-            <li  onClick={() => setActiveNav('#login')}  className={activeNav === '#login' ? 'active' : ''}><button className="loginbtn btn">Login / Register</button></li>
+            <li onClick={() => setActiveNav('#login')}  className={activeNav === '#login' ? 'active' : ''}><Link to="/login" className="loginbtn btn">Login / Register</Link></li>
         </div>
         {/* <li><Link to="/main">Main</Link></li> */}
     </div>
