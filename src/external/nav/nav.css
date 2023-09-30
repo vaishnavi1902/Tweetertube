@@ -31,13 +31,13 @@
     font-weight: 700;
 }
 .loginbtn:hover {
-    background-color: transparent;
-    color: var(--color-bg);
+    background-color: var(--color-bg);
+    color: var(--color-white);
     transition: var(--transition);
     border: 1px solid var(--color-bg);
 }
 .navimg{
-    width: 80px;
+    width: 60px;
 }
 #homeli {
     display: flex;
@@ -60,4 +60,12 @@
     transition: var(--transition);
     color: var(--color-white);
     background-color: var(--color-bg-variant);
+    border-radius: 10px;
+}
+.text-blue {
+    color: rgb(41, 98, 231);
+}
+
+.skiptranslate {
+    /* display: none !important; */
 }

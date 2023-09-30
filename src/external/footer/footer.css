@@ -14,6 +14,7 @@
     padding:1rem 8rem 1rem 0;
 }
 .description p{
+    margin-top: 1rem;
     font-size: 14px;
 }
 .p-footer{
@@ -24,7 +25,8 @@
 .footer-links{
     padding:1rem 0;
 }
-.footer-links li a{
+.footer-links li *{
+    margin-top: 1rem;
     color: white;
 }
 .footer-links li a:hover{
