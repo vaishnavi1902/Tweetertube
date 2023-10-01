@@ -1,0 +1,139 @@
+/* first section */
+
+.linktag {
+    background-color: #e7e0f0e6;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.linktag a:hover {
+    color: blue;
+}
+
+.linktag a {
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: small;
+}
+
+.heading h1{
+    text-align: left;
+    font-weight: 200;
+    padding-top: 15px;
+    padding-left: 30px;
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: var(--color-white);
+}
+
+.blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1px;
+}
+
+.blog-image {
+    flex: 1;
+    /* margin-right: 40px; */
+    overflow: hidden;
+}
+
+.blog-image img{
+    width: 450px;
+    height: 250px;
+    display: block;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+
+.blog-image img:hover{
+    transform: scale(1.1);
+}
+
+.blog-content {
+    flex: 1;
+}
+
+.blog-content h2 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.blog-content h2:hover {
+    color: blue;
+}
+
+.blog-content p{
+    /* line-height: 1.5; */
+    text-align: justify;
+}
+
+.blog-content .read-more {
+    background-color: blue;
+    color: var(--color-white);
+    text-transform: capitalize;
+    outline: transparent;
+    border: transparent;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 15px;
+    transition: 0.3 ease;
+}
+
+.blog-content .read-more:hover {
+    background-color: var(--color-bg-variant);
+    color: var(--color-white);
+    transition: var(--transition);
+    border: 1px solid var(--color-bg);
+}
+
+/* -----------medium devices---------- */
+
+@media only screen and (max-width : 1024px) {
+    
+}
+
+/* -----------smaller devices---------- */
+
+@media screen  and (max-width: 768px){
+    .heading h1{
+        font-size: large;
+        font-weight: 400;
+        text-align: center;
+    }
+    .container {
+        padding: 0px;
+    }
+    .blog{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .blog-image {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .blog-content {
+        padding: 0px;
+        font-stretch: 16px;
+    }
+    .blog-content .read-more {
+        font-size: 16px;
+    }
+}
+

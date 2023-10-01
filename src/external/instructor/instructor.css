@@ -3,9 +3,11 @@
 .linktag {
     background-color: #e7e0f0e6;
     padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.linktag .active:hover {
+.linktag a:hover {
     color: blue;
 }
 
@@ -18,12 +20,14 @@
 
 .bgimage {
     width: 100vw;
-    height: 100vh;
+    height: max-content;
+    padding: 10rem 4rem;
     position: relative;
     background-image: url("../../assets/bg-1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+    box-shadow: inset 0 0 0 2000px #0808087f;
+    margin-top: 0.1px;
 }
 
 .overlay {
@@ -85,6 +89,7 @@
     height: 100%;
     width: 100%;
     padding-top: 80px;
+    margin-top: 1px;
 }
 
 .grid-item {
@@ -152,7 +157,7 @@
 
 .teachimg {
     width: 50%;
-    padding: 100px 30px;
+    padding: 80px 20px;
 }
 
 .teachimg img {
@@ -185,4 +190,15 @@
 
 .login .loginnow:hover {
     color: blue;
+}
+
+/* -----------medium devices---------- */
+@media only screen and (max-width : 1024px) {
+    .overlay {
+        align-items: center;    }
+    }
+
+/* -----------smaller devices---------- */
+@media only screen and (max-width : 768px) {
+
 }
