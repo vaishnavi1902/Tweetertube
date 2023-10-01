@@ -37,3 +37,29 @@
     gap: 10px;
     padding:1rem 0;
 }
+/* ---------------medium devices-------------------- */
+
+@media screen and (max-width: 1024px){   
+    #footer {
+        background-color: var(--color-primary-variant);
+        color: var(--color-white);
+        padding: 1rem 1rem;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .description , .footer-links , .footer .socials ,.heading-footer {
+        padding:1rem;
+    }
+}
+
+
+
+/* ---------------small devices -------------------- */
+@media screen and (max-width: 600px){   
+    #footer {
+       /*  */
+    }
+    .description , .footer-links , .footer .socials ,.heading-footer {
+        padding:1rem;
+    }
+}

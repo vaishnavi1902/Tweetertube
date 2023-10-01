@@ -5,7 +5,7 @@ import Blog from "./Blog/Blog"
 import Contact from "./contact/Contact"
 import Instructor from "./instructor/Instructor"
 import Footer from "./footer/footer"
-
+import Login from "./login/Login"
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/instructor" element={<Instructor />} />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/main" element={<Main />} />    */}
+            <Route path="/login" element={<Login />} />   
         </Routes>
       <Footer/>
     </Router>   
