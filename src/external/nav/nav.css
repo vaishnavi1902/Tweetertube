@@ -73,10 +73,8 @@
       float: right;
       display: block !important;
     }
-}
-  
+} 
 @media screen and (max-width: 1024px) {
-
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
         position: absolute;
@@ -90,9 +88,7 @@
         display: block;
     }
 }
-
 /* ---------------medium devices-------------------- */
-
 @media screen and (max-width: 1025px){   
    .topbar{
     display: block;
