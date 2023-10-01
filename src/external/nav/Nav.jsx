@@ -3,10 +3,18 @@ import './nav.css'
 import{ useState  } from 'react'
 import Translate from "./Translate"
 import { AiOutlineMail , AiFillMobile} from 'react-icons/ai'
+
 const Nav = () => {
   const [activeNav , setActiveNav] = useState('#');
   
- 
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+    }
 
   return (
     <>
@@ -15,7 +23,7 @@ const Nav = () => {
         <Translate/>
         <div className="topbar-mobile"><AiFillMobile className="text-primary"/><p className="text-light">+91 77680 45847</p></div>
     </div>
-    <div className="nav" id="myTopnav">
+    <div className="topnav" id="myTopnav">
         <div className="one">
             <li><Link to="/"  onClick={() => setActiveNav('#')} id="homeli" className={activeNav === '#' ? '' : ''}><img className="navimg" src="home1.png" alt=""/>Shiksha<span className="text-blue">Sankalp</span></Link></li>
             <li className="all-li"><Link to="/courses" onClick={() => setActiveNav('#courses')}  className={activeNav === '#courses' ? 'active' : ''}>Courses</Link></li>
@@ -23,15 +31,10 @@ const Nav = () => {
             <li className="all-li"><Link to="/instructor" onClick={() => setActiveNav('#instructor')}  className={activeNav === '#instructor' ? 'active' : ''}>Become an Instructor</Link></li> 
             <li className="all-li"><Link to="/contact" onClick={() => setActiveNav('#contact')}  className={activeNav === '#contact' ? 'active' : ''}>Contact</Link></li>
         </div>
-        <div>
+        <div className="two">
             <li onClick={() => setActiveNav('#login')}  className={activeNav === '#login' ? 'active' : ''}><Link to="/login" className="loginbtn btn">Login / Register</Link></li>
         </div>
-       <li className="icon">
-        <a href="javascript:void(0);" className="icon" onClick="myFunction()">
-              <p>ico</p>     
-          </a>
-       </li>
-        {/* <li><Link to="/main">Main</Link></li> */}
+       <a href="javascript:void(0);" className="icon" onClick={myFunction}><p>ico</p></a>
     </div>
     </>
   )
