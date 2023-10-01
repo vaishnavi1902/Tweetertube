@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import './nav.css'
 import{ useState  } from 'react'
 import Translate from "./Translate"
+import { CgMoreO } from 'react-icons/cg'
 import { AiOutlineMail , AiFillMobile} from 'react-icons/ai'
 
 const Nav = () => {
@@ -34,7 +35,7 @@ const Nav = () => {
         <div className="two">
             <li onClick={() => setActiveNav('#login')}  className={activeNav === '#login' ? 'active' : ''}><Link to="/login" className="loginbtn btn">Login / Register</Link></li>
         </div>
-       <a href="javascript:void(0);" className="icon" onClick={myFunction}><p>ico</p></a>
+       <a href="javascript:void(0);" className="icon" onClick={myFunction}><CgMoreO/></a>
     </div>
     </>
   )

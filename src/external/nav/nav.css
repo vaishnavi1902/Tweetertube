@@ -64,8 +64,10 @@
 .topnav .icon {
     display: none;
 }
-  
-@media screen and (max-width: 600px) {
+.topnav {
+    transition: 0.5s;
+} 
+@media screen and (max-width: 1024px) {
     .topnav li:not(:first-child) , .loginbtn {display: none !important; }
     .topnav .icon {
       float: right;
@@ -73,12 +75,13 @@
     }
 }
   
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
+
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+        position: absolute;
+        right: 4rem;
+        top: 1rem;
     }
     .topnav.responsive .all-li:not(:first-child) , .topnav.responsive .loginbtn  {
         display: flex !important; 
