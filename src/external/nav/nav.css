@@ -63,17 +63,17 @@
 }  
 .topnav .icon {
     display: none;
-  }
+}
   
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .topnav li:not(:first-child) , .loginbtn {display: none !important; }
     .topnav .icon {
       float: right;
       display: block !important;
     }
-  }
+}
   
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -86,7 +86,7 @@
     .topnav.responsive  , .topnav.responsive .one {
         display: block;
     }
-  }
+}
 
 /* ---------------medium devices-------------------- */
 
@@ -101,13 +101,4 @@
     justify-content: center;
     align-items: center;
     }
-
-
-}
-
-
-
-/* ---------------small devices -------------------- */
-@media screen and (max-width: 600px){   
-
 }
