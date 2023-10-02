@@ -72,6 +72,8 @@
 }  
 .topnav .icon {
     display: none;
+    position: absolute;
+    right: 4rem;
 }
 .topnav {
     transition: 0.5s;
