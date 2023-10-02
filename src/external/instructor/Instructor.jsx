@@ -167,7 +167,7 @@ const Instructor = () => {
             <div className="login">
               <p>
                 Please{" "}
-                <a href="/" className="loginnow">
+                <a href="../login" className="loginnow">
                   <b>login</b>
                 </a>{" "}
                 to send your request!

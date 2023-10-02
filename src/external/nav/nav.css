@@ -10,7 +10,16 @@
     gap: 6px;
     align-items: center;
 }
-.nav {
+.goog-te-gadget .goog-te-combo {
+    background-color: rgb(5 151 255);
+    border: 1px solid rgba(96, 189, 255, 0);
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    border-radius: 8px;
+}
+.topnav {
     background-color: rgb(255, 255, 255);
     display: flex;
     gap: 2rem;
@@ -49,13 +58,9 @@
 .all-li a{
     font-weight: 500;
     border-radius: 10px;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.2rem;
 }
-.all-li:hover a{
-    /* transition: var(--transition); */
-    /* color: blue; */
-    /* background-color: rgba(38, 0, 255, 0.326); */
-}
+
 .active {
     transition: var(--transition);
     color: var(--color-white);
@@ -64,8 +69,46 @@
 }
 .text-blue {
     color: rgb(41, 98, 231);
+}  
+.topnav .icon {
+    display: none;
+    position: absolute;
+    right: 4rem;
 }
-
-.skiptranslate {
-    /* display: none !important; */
+.topnav {
+    transition: 0.5s;
+} 
+@media screen and (max-width: 1024px) {
+    .topnav li:not(:first-child) , .loginbtn {display: none !important; }
+    .topnav .icon {
+      float: right;
+      display: block !important;
+    }
+} 
+@media screen and (max-width: 1024px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 4rem;
+        top: 1rem;
+    }
+    .topnav.responsive .all-li:not(:first-child) , .topnav.responsive .loginbtn  {
+        display: flex !important; 
+    }
+    .topnav.responsive  , .topnav.responsive .one {
+        display: block;
+    }
+}
+/* ---------------medium devices-------------------- */
+@media screen and (max-width: 1025px){   
+   .topbar{
+    display: block;
+    text-align: center;
+   }
+   .topbar-email , .topbar-mobile{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    }
 }

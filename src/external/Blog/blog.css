@@ -8,7 +8,7 @@
 }
 
 .linktag a:hover {
-    color: blue;
+    color:  var(--color-bg-variant);
 }
 
 .linktag a {
@@ -69,8 +69,14 @@
     margin-bottom: 15px;
 }
 
+/* <<<<<<< HEAD */
 .blog-content h3:hover {
     color: blue;
+}
+/* ======= */
+.blog-content h2:hover {
+    color:  var(--color-bg-variant);
+/* >>>>>>> 275177a79fbbc50f606183c14be8c05562f8d983 */
 }
 
 .blog-content p{
@@ -79,7 +85,7 @@
 }
 
 .blog-content .read-more {
-    background-color: blue;
+    background-color:  var(--color-bg-variant);
     color: var(--color-white);
     text-transform: capitalize;
     outline: transparent;

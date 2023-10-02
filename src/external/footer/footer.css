@@ -4,6 +4,7 @@
     padding: 1rem 4rem;
     display: grid;
     grid-template-columns: 50% 25% 25%;
+    margin-top: 0;
 }
 .heading-footer{
     display: flex;
@@ -25,8 +26,13 @@
 .footer-links{
     padding:1rem 0;
 }
-.footer-links li *{
+.footer-links li{
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+.footer-links li a{
+    margin-left: 5px;
     color: white;
 }
 .footer-links li a:hover{
@@ -36,4 +42,32 @@
     display: flex;
     gap: 10px;
     padding:1rem 0;
+    font-size: 23px;
+}
+/* ---------------medium devices-------------------- */
+
+@media screen and (max-width: 1024px){   
+    #footer {
+        background-color: var(--color-primary-variant);
+        color: var(--color-white);
+        padding: 1rem 1rem;
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 0 !important;
+    }
+    .description , .footer-links , .footer .socials ,.heading-footer {
+        padding:1rem;
+    }
+}
+
+
+
+/* ---------------small devices -------------------- */
+@media screen and (max-width: 600px){   
+    #footer {
+       /*  */
+    }
+    .description , .footer-links , .footer .socials ,.heading-footer {
+        padding:1rem;
+    }
 }

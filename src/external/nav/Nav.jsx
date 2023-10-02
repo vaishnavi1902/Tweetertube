@@ -1,10 +1,49 @@
+// <<<<<<< HEAD
+// import { Link } from "react-router-dom";
+// import "./nav.css";
+// import { useState } from "react";
+// import Translate from "./Translate";
+// import { AiOutlineMail, AiFillMobile } from "react-icons/ai";
+// const Nav = () => {
+//   const [activeNav, setActiveNav] = useState("#");
+
+//   return (
+//     <>
+//       <div className="topbar">
+//         <div className="topbar-email">
+//           <AiOutlineMail className="text-primary" />{" "}
+//           <a className="text-light" href="mailto:shiksha.sankalp01@gmail.com">
+//             shiksha.sankalp01@gmail.com
+//           </a>
+//         </div>
+//         <Translate />
+//         <div className="topbar-mobile">
+//           <AiFillMobile className="text-primary" />
+//           <p className="text-light">+91 77680 45847</p>
+//         </div>
+//       </div>
+//       <div className="nav">
+{
+  /* ======= */
+}
 import { Link } from "react-router-dom";
 import "./nav.css";
 import { useState } from "react";
 import Translate from "./Translate";
+import { CgMoreO } from "react-icons/cg";
 import { AiOutlineMail, AiFillMobile } from "react-icons/ai";
+
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
+
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
   return (
     <>
@@ -21,7 +60,8 @@ const Nav = () => {
           <p className="text-light">+91 77680 45847</p>
         </div>
       </div>
-      <div className="nav">
+      <div className="topnav" id="myTopnav">
+        {/* >>>>>>> 275177a79fbbc50f606183c14be8c05562f8d983 */}
         <div className="one">
           <li>
             <Link
@@ -71,6 +111,7 @@ const Nav = () => {
             </Link>
           </li>
         </div>
+        {/* <<<<<<< HEAD */}
         <div>
           <li
             onClick={() => setActiveNav("#login")}
@@ -81,6 +122,22 @@ const Nav = () => {
         </div>
         {/* <li><Link to="/main">Main</Link></li> */}
       </div>
+      {/* ======= */}
+      <div className="two">
+        <li
+          onClick={() => setActiveNav("#login")}
+          className={activeNav === "#login" ? "active" : ""}
+        >
+          <Link to="/login" className="loginbtn btn">
+            Login / Register
+          </Link>
+        </li>
+      </div>
+      <a href="javascript:void(0);" className="icon" onClick={myFunction}>
+        <CgMoreO />
+      </a>
+      {/* </div> */}
+      {/* // >>>>>>> 275177a79fbbc50f606183c14be8c05562f8d983 */}
     </>
   );
 };
