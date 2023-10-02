@@ -2,7 +2,7 @@
 
 const Peoplessay = () => {
   return (
-    <div>Peoplessay</div>
+    <section className="container">Peoplessay</section>
   )
 }
 
