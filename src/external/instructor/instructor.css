@@ -85,9 +85,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: #fcfafae6;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
+    padding: 1rem 4rem;
     padding-top: 80px;
     margin-top: 1px;
 }
@@ -100,8 +98,9 @@
 
 /* third section */
 
-.howto {
+.howto , .teach1 {
     margin-top: 50px;
+    padding: 1rem 4rem;
 }
 
 .howto .head1 h1 {
@@ -198,7 +197,14 @@
         align-items: center;    }
     }
 
+
 /* -----------smaller devices---------- */
 @media only screen and (max-width : 768px) {
-
+    .tabs .irules {
+        display: block;
+        padding: 0px 9px;
+    }
+    .grid-container {
+        grid-template-columns: 100%;
+    }
 }
