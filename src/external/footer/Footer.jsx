@@ -1,7 +1,8 @@
 import './footer.css'
 import { Link } from "react-router-dom"
-
-import { AiOutlineInfoCircle , AiOutlineUnorderedList ,  AiOutlineDisconnect , AiOutlineCheck , AiOutlineMail , AiFillGithub , AiFillLinkedin } from 'react-icons/ai'
+import { FaGraduationCap , FaChalkboardTeacher} from 'react-icons/fa'
+import { CiReceipt } from 'react-icons/ci'
+import {  AiOutlineHome , AiOutlineMail , AiOutlineInfoCircle , AiOutlineUnorderedList ,  AiOutlineDisconnect , AiOutlineCheck , AiFillGithub , AiFillLinkedin } from 'react-icons/ai'
 const Footer = () => {
   return (
     <section id="footer" className='footer'>
@@ -18,11 +19,11 @@ const Footer = () => {
       <div>
       <div className='heading-footer'><h4>Links</h4> <AiOutlineUnorderedList /></div>
       <div className="footer-links"> 
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/courses">Courses</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/instructor">Become an Instructor</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><AiOutlineHome/><Link to="/">Home</Link></li>
+          <li><FaGraduationCap /><Link to="/courses">Courses</Link></li>
+          <li><CiReceipt/><Link to="/blog">Blog</Link></li>
+          <li><FaChalkboardTeacher/><Link to="/instructor">Become an Instructor</Link></li>
+          <li><AiOutlineMail/><Link to="/contact">Contact</Link></li>
       </div>
       </div>
       <div>

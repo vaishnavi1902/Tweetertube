@@ -1,10 +1,10 @@
-import Welcomee from "./Welcomee"
+import Welcomee from "./welcome/Welcomee"
 import Nav from "./nav/nav"
 import Courses from "./Courses/Courses"
 import Blog from "./Blog/Blog"
 import Contact from "./contact/Contact"
 import Instructor from "./instructor/Instructor"
-import Footer from "./footer/footer"
+import Footer from "./footer/Footer"
 import Login from "./login/Login"
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 const Home = () => {

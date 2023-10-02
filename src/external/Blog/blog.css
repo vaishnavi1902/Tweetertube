@@ -8,7 +8,7 @@
 }
 
 .linktag a:hover {
-    color: blue;
+    color:  var(--color-bg-variant);
 }
 
 .linktag a {
@@ -70,7 +70,7 @@
 }
 
 .blog-content h2:hover {
-    color: blue;
+    color:  var(--color-bg-variant);
 }
 
 .blog-content p{
@@ -79,7 +79,7 @@
 }
 
 .blog-content .read-more {
-    background-color: blue;
+    background-color:  var(--color-bg-variant);
     color: var(--color-white);
     text-transform: capitalize;
     outline: transparent;

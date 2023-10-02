@@ -8,7 +8,7 @@
 }
 
 .linktag a:hover {
-    color: blue;
+    color:  var(--color-bg-variant);
 }
 
 .linktag a {
@@ -43,7 +43,7 @@
 }
 
 .overlay h1 span {
-    color: blue;
+    color: #00c7ff;
     text-transform: uppercase;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .teachcoursebtn {
-    background-color: blue;
+    background-color: #00c7ff;
     color: var(--color-white);
     text-transform: capitalize;
     outline: transparent;
@@ -85,9 +85,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: #fcfafae6;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
+    padding: 1rem 4rem;
     padding-top: 80px;
     margin-top: 1px;
 }
@@ -100,8 +98,9 @@
 
 /* third section */
 
-.howto {
+.howto , .teach1 {
     margin-top: 50px;
+    padding: 1rem 4rem;
 }
 
 .howto .head1 h1 {
@@ -111,11 +110,12 @@
 }
  
 .howto .head1 h1 span {
-    color: blue;
+    color:  var(--color-bg-variant);
 }
 
 .tabs {
     margin-top: 5px;
+    text-align: center;
 }
 
 .tabs .irules {
@@ -130,7 +130,7 @@
 }
 
 .tabs .irules li h2:hover {
-    color: blue;
+    color:  var(--color-bg-variant);
 }
 
 .content {
@@ -150,9 +150,7 @@
 
 .teach1 {
     display: flex;
-    flex-direction: row;
     background-color: rgb(229, 230, 244);
-    margin-top: 50px;
 }
 
 .teachimg {
@@ -189,16 +187,36 @@
 }
 
 .login .loginnow:hover {
-    color: blue;
+    color:  var(--color-bg-variant);
 }
 
 /* -----------medium devices---------- */
 @media only screen and (max-width : 1024px) {
     .overlay {
-        align-items: center;    }
+        align-items: center;  
+        text-align: center;  
+        margin-left: 0 !important;
     }
+}
+
 
 /* -----------smaller devices---------- */
 @media only screen and (max-width : 768px) {
-
+    .tabs .irules {
+        display: block;
+        padding: 0px 9px;
+    }
+    .grid-container {
+        grid-template-columns: 100%;
+    }
+    .howto, .teach1{
+        padding: 1rem;
+    }
+    .teach1 {
+        flex-direction: column;
+    }
+    .teachimg {
+        width: 100%;
+        padding: 0;
+    }
 }
