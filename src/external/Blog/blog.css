@@ -64,12 +64,12 @@
     flex: 1;
 }
 
-.blog-content h2 {
-    font-weight: 400;
+.blog-content h3 {
+    font-weight: 600;
     margin-bottom: 15px;
 }
 
-.blog-content h2:hover {
+.blog-content h3:hover {
     color: blue;
 }
 
@@ -85,13 +85,12 @@
     outline: transparent;
     border: transparent;
     font-size: medium;
-    font-weight: 700;
-    padding: 10px 20px;
+    font-weight: 400;
+    padding: 7px 20px;
     border-radius: 4px;
     display: inline-block;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 15px;
     transition: 0.3 ease;
 }

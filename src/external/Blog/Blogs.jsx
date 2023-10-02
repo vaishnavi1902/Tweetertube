@@ -9,7 +9,7 @@ const Blogs = () => {
               <img src={item.image} alt="" />
             </div>
             <div className="blog-content">
-              <h2>{item.title}</h2>
+              <h3>{item.title}</h3>
               <p>{item.description}</p>
               <a href="/" className="read-more">
                 Read More
