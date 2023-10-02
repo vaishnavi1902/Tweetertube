@@ -1,7 +1,9 @@
-const Translate = () => {  
+const Translate = () => {
   return (
     <>
-        <div id="myid"></div>
+      <div id="google_translate_element"></div>
+
+      <div id="myid"></div>
     </>
   );
 };
