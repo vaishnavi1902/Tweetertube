@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./instructor.css";
 import bg2 from "../../assets/bg-2.webp";
-// import { BsCameraFill } from "react-icons/bs";
-// import { AiOutlineRight } from "react-icons/ai";
+import { BsCamera } from "react-icons/bs";
+import { AiOutlineRight } from "react-icons/ai";
+import { BiMessageAltAdd } from "react-icons/bi";
+import { BsPeople } from "react-icons/bs";
 
 const Instructor = () => {
   const [toggle, setToggle] = useState(1);
@@ -11,16 +13,15 @@ const Instructor = () => {
     setToggle(id);
   }
   return (
-
     <>
       {/* first section */}
 
       <div className="linktag">
-        <a href="/">Home</a>
-        {/* <AiOutlineRight /> */}
+        <a href="/">Home </a>{" "}
+        <AiOutlineRight style={{ height: "12px", width: "12px" }} />
         <a href="/">Become an Instructor</a>
       </div>
-      <div className="bgimage">
+      <section className="bgimage">
         <div className="overlay">
           <h1>
             <span>become</span> an Instructor &{" "}
@@ -39,17 +40,16 @@ const Instructor = () => {
             We’ll check your proposal and get back to you.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* second section */}
 
-      <div className="grid-container">
+      <section className="grid-container">
         <div className="grid-item">
           <div>
-            {/* <BsCameraFill
-              className="text-primary "
-              style={{ width: "40px", height: "40px" }}
-            /> */}
+            <BsCamera
+              style={{ color: "blue", width: "40px", height: "40px" }}
+            />
           </div>
           <div>
             <h2 className="head2">Produced by shikhasankalp</h2>
@@ -61,7 +61,12 @@ const Instructor = () => {
         </div>
         <div className="grid-item">
           <div>
-            <h2 className="head2">Share and grow with the community</h2>
+            <BiMessageAltAdd
+              style={{ color: "blue", width: "40px", height: "40px" }}
+            />
+          </div>
+          <div>
+            <h2 className="head2">Share with the community</h2>
             <p className="para2">
               Inspire and get inspired alongside other creatives. Eduma is a
               community with millions of creatives who are eager to learn.
@@ -69,6 +74,11 @@ const Instructor = () => {
           </div>
         </div>
         <div className="grid-item">
+          <div>
+            <BsPeople
+              style={{ color: "blue", width: "40px", height: "40px" }}
+            />
+          </div>
           <div>
             <h2 className="head2">Your creativity is golden</h2>
             <p className="para2">
@@ -78,11 +88,11 @@ const Instructor = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* third section */}
 
-      <div className="howto">
+      <section className="howto">
         <div className="head1">
           <h1>
             how to become an <span>instructor ?</span>
@@ -138,11 +148,11 @@ const Instructor = () => {
             generator on the Internet.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* fourth section */}
 
-      <div className="teach1">
+      <section className="teach1">
         <div className="teachimg">
           <img src={bg2} alt="" className="bgimg" width={550} height={300} />
         </div>
@@ -165,7 +175,7 @@ const Instructor = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
