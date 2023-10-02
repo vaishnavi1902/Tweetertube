@@ -2,7 +2,7 @@
 
 const Categories = () => {
   return (
-    <div>Categories</div>
+    <section className="container">Categories</section>
   )
 }
 

@@ -2,7 +2,7 @@
 
 const Ourportal = () => {
   return (
-    <div>Ourportal</div>
+    <section className="container">Ourportal</section>
   )
 }
 

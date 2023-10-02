@@ -1,7 +1,7 @@
 
 const Schools = () => {
   return (
-    <div>Schools</div>
+    <section className="container">Schools</section>
   )
 }
 
