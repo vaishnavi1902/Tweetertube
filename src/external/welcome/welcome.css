@@ -1,0 +1,86 @@
+.car-image {
+    height: 200px !important;
+}
+.home-h1 {
+    display: flex;
+    align-items: center;
+}
+.home-h1 span {
+    color: var(--color-primary-variant);
+    margin: 0 10px;
+}
+.slider-div {
+    text-align: center;
+    margin: 2rem;
+    padding:2rem 10px;
+    background-color: rgba(240, 240, 240, 0.754);
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+.slider-div:hover {
+    border-color: rgba(41, 248, 255, 0.754);
+    background-color: transparent;
+    transform: scale(1.04);
+    transition: var(--transition);
+}
+.slider-img {
+    width: 100%;
+    border-radius: 8px;
+}
+.course-name {
+    font-size: 21px;
+}
+.course-domain {
+    font-size: 17px;
+}
+.course-name , .course-domain {
+    display: block;
+    gap: 1rem;
+    justify-content: center;
+}
+.course-name span , .course-domain span {
+    color: rgb(9, 85, 184);
+    font-weight: 800;
+}
+.slider-div .description {
+    padding: 0 15px;
+    font-size: 13px;
+}
+.read-btn{
+    margin-top: 5px;
+    background-color: var(--color-bg-variant);
+    color: var(--color-white);
+    outline: transparent;
+    border: transparent;
+    padding: 0.7rem;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+.read-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-bg);
+    transition: var(--transition);
+    border: 1px solid var(--color-bg);
+}
+.react-multiple-carousel__arrow--right {
+    right: 0;
+}
+.react-multiple-carousel__arrow--left {
+    left: 0;
+}
+.react-multiple-carousel__arrow--right::before {
+    content: "\e825";
+}
+.react-multiple-carousel__arrow::before{
+    color: #000;
+}
+.react-multiple-carousel__arrow {
+    background-color: transparent;
+    border-color: #000;
+    border: 1px solid;
+}
+.react-multiple-carousel__arrow:hover {
+    background-color: rgba(42, 198, 255, 0.191);
+}

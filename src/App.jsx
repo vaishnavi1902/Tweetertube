@@ -3,7 +3,7 @@ const App = () => {
   return (
     <>
     <Home/>
-    </>
+    </> 
   );
 }
 
