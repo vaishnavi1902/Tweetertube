@@ -1,6 +1,4 @@
 /*------------ contact section ----------- */
-
-
 .linktag {
     background-color: #e7e0f0e6;
     padding: 10px;
@@ -22,6 +20,7 @@
 .heading {
     font-weight: 800;
     text-align: center;
+    font-size: 35px;
     padding: 10px 10px;
     color: var(--color-white);
 }
@@ -36,15 +35,6 @@
     padding: 40px 0px;
     margin-bottom: 0.1px;
 }
-
-.border {
-    width: 100px;
-    height: 10px;
-    background: blue;
-    margin: 10px auto;
-    margin-bottom: 20px;
-}
-
 .contact-form {
     max-width: 600px;
     margin: auto;
@@ -55,7 +45,7 @@
 .contact-label {
     color: var(--color-white);
     font-weight: 600;
-    font-size: small;
+    font-size: 20px;
 }
 
 .contact-form-text {
@@ -64,22 +54,23 @@
     box-sizing: border-box;
     margin: 16px 0;
     border-radius: 10px;
-    background: var(--color-white);
-    padding: 15px 40px;
+    background: #ffffff2a;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    color: white;
 }
-
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .contact-form-btn {
-    background-color: blue;
+    background-color: var(--color-primary-variant);
     color: var(--color-white);
-    text-transform: capitalize;
-    outline: transparent;
-    border: transparent;
-    font-size: medium;
+    font-size: 20px;
     font-weight: 700;
     padding: 10px 70px;
     border-radius: 8px;  
-    margin-left: 180px;
-    margin-top: 10px;
 }
 
 .contact-form-btn:hover {
