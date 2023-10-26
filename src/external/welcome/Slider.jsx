@@ -43,7 +43,7 @@ const Slider = () => {
               Student can access course contents and explore their learning
               skills
             </p>
-            <a href="" className="slide-btn">
+            <a href="../courses" className="slide-btn">
               Courses
             </a>
           </div>
@@ -58,7 +58,7 @@ const Slider = () => {
               If teacher wants to take an sessions or lecture they can teach &
               become an instructor.
             </p>
-            <a href="" className="slide-btn">
+            <a href="../instructor" className="slide-btn">
               Instructor
             </a>
           </div>
@@ -74,7 +74,7 @@ const Slider = () => {
             <p className="slide-para">
               Schools can take a courses they want for their students.
             </p>
-            <a href="" className="slide-btn">
+            <a href="../courses" className="slide-btn">
               Courses
             </a>
           </div>
