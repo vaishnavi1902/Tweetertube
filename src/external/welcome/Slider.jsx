@@ -26,7 +26,7 @@ const Slider = () => {
   };
 
   return (
-    <section id="myslider" className="container myslider-container">
+    <section id="myslider" className="myslider-container">
       <Carousel
         responsive={responsive}
         infinite={true}

@@ -87,8 +87,9 @@
 
 /* --------------- slider css -------------------- */
 
-.container .myslider-container {
+.myslider-container {
     width: 100%;  
+    margin-top: 0px;
 }
 .my-slide {
     width: 100%;
@@ -99,7 +100,7 @@
 }
 .my-slide .slide-text {
     position: absolute;
-    top: 240px;
+    top: 280px;
     left: 60px;
     color: var(--color-white);
     line-height: 2.5;
