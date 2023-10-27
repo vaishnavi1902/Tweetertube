@@ -1,6 +1,6 @@
 import "./blog.css";
 import { AiOutlineRight } from "react-icons/ai";
-import Blogs from "./blogs";
+import Blogs from "./Blogs";
 
 const Blog = () => {
   return (
@@ -10,11 +10,7 @@ const Blog = () => {
         <AiOutlineRight style={{ height: "12px", width: "12px" }} />
         <a href="/">Blog</a>
       </div>
-      <div>
-        <div className="heading">
-          <h1>Blog</h1>
-        </div>
-      </div>
+
       <Blogs />
     </>
   );

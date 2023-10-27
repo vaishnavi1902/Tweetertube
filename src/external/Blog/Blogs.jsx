@@ -4,7 +4,7 @@ const Blogs = () => {
     return (
       <>
         <div className="container">
-          <section className="blog">
+          <section className="blog" id="blog">
             <div className="blog-image">
               <img src={item.image} alt="" />
             </div>
