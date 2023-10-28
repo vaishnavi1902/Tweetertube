@@ -1,8 +1,8 @@
 import './login.css';
 import { Link } from "react-router-dom"
-import student from './login_register/student.jfif'
-import teacher from './login_register/teacher.jfif'
-import school from './login_register/school.jfif'
+import student from './login_register/girl-school.jpg'
+import teacher from './login_register/teacher.jpeg'
+import school from './login_register/childresn-school.jfif'
 const Login = () => {
   return (
    <>
