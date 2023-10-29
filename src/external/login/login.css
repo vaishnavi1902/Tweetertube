@@ -28,6 +28,7 @@
 .item-login img {
     width: 100%;
     height: 210px;
+    border-radius: 10px;
 }
 .item-login:hover {
     transition: var(--transition);
@@ -120,6 +121,9 @@
     grid-template-columns: 40%;
     margin-bottom: 0 !important;
 }
+.login-div {
+    background-image: url('./login_register/bg-1.jpeg');
+}
 .register-div h3 {
     text-align: center;
 }
@@ -182,4 +186,16 @@
         border-radius: 8px;
         font-size: 17px;
     }
+}
+
+/* -------------------login-------------------------------- */
+.img-login-div {
+    display: flex;
+    justify-content: center !important;
+}
+.login-img {
+    margin: 3rem 0;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
 }

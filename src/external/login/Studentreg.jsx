@@ -38,6 +38,10 @@ const Studentreg = () => {
               <label htmlFor="year">Academic Year (Optional)</label>
               <input type="number" id="year" placeholder="enter Academic year"  name="year" />
             </div>
+            <div>
+              <label htmlFor="password">Enter Password </label>
+              <input type="password" placeholder="Enter the password" id="password" name="password"/>
+            </div>
             <input type="submit" className="submit" value="Submit" />
           </form>
       </div>

@@ -76,6 +76,10 @@ const Schoolreg = () => {
               <label htmlFor="licence">Upload School Licence</label>
               <input type="file" id="licence" name="licence"  required/>
             </div>
+            <div>
+              <label htmlFor="password">Enter Password </label>
+              <input type="password" placeholder="Enter the password" id="password" name="password"/>
+            </div>
             <input type="submit" className="submit" value="Submit" />
           </form>
       </div>

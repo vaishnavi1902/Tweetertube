@@ -51,6 +51,10 @@ const Teacherreg = () => {
               <label htmlFor="proefficiency">Teaching Proefficiency in</label>
               <input type="text" id="proefficiency" placeholder="enter your teaching interests"  name="proefficiency" required/>
             </div>
+            <div>
+              <label htmlFor="password">Enter Password </label>
+              <input type="password" placeholder="Enter the password" id="password" name="password"/>
+            </div>
             <input type="submit" className="submit" value="Submit" />
           </form>
       </div>
