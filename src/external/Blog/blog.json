@@ -31,8 +31,14 @@
         "description" : "The eLearning in shishasankalp is a learning platform run by a learning experience design consultant. Using  degree in Instructional Design and Technology, she shares professional strategies and resources that you can use to improve your elearning initiatives. Those who are only starting to learn about this modern type of learning will find articles discussing the basics of elearning and ways to design online learning content. "
     },
     {
-        "id" : 5 ,
+        "id" : 6 ,
         "image" : "https://www.shutterstock.com/image-photo/handheld-shot-village-school-girl-600w-2150952249.jpg",
+        "title" : "Access from anywhere",
+        "description" : "The eLearning in shishasankalp is a learning platform run by a learning experience design consultant. Using  degree in Instructional Design and Technology, she shares professional strategies and resources that you can use to improve your elearning initiatives. Those who are only starting to learn about this modern type of learning will find articles discussing the basics of elearning and ways to design online learning content. "
+    },
+    {
+        "id" : 7 ,
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwN8fz5RNnGpZq3pgv39WTJ58vdTiJ2MJip9MlIG6LAxXZxx-6H2DO3e57_4Lv0hTIrLk&usqp=CAU",
         "title" : "Access from anywhere",
         "description" : "The eLearning in shishasankalp is a learning platform run by a learning experience design consultant. Using  degree in Instructional Design and Technology, she shares professional strategies and resources that you can use to improve your elearning initiatives. Those who are only starting to learn about this modern type of learning will find articles discussing the basics of elearning and ways to design online learning content. "
     }

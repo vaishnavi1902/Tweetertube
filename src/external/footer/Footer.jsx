@@ -29,9 +29,9 @@ const Footer = () => {
       <div>
       <div className='heading-footer'><h4>Connect us</h4><AiOutlineDisconnect/></div>
       <div className='socials'>
-        <AiOutlineMail/>
-        <AiFillGithub/>
-        <AiFillLinkedin/>
+        <a className='footer-socials'  href="mailto:shiksha.sankalp01@gmail.com" target='blank'><AiOutlineMail/></a>
+        <a className='footer-socials'  href="https://github.com/vaishnavi1902" target='blank'><AiFillGithub/></a>
+        <a className='footer-socials'  href="https://www.linkedin.com/in/vaishnavi-kumbhakarna-838a13221/" target='blank'><AiFillLinkedin/></a>
       </div>
       </div>
     </section>

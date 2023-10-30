@@ -1,0 +1,201 @@
+.login {
+    width: 100%;
+    background: url('./login_register/bg-4.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: max-content;
+    padding: 100px 10px;
+    text-align: center;
+    margin-top: 0 !important;
+}
+#login {
+    background-color: transparent;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.item-login {
+    display: block !important;
+    border: 1px solid var(--color-primary);
+    text-align: center;
+    padding: 1rem;
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    width: 30%;
+}
+.item-login img {
+    width: 100%;
+    height: 210px;
+    border-radius: 10px;
+}
+.item-login:hover {
+    transition: var(--transition);
+    transform: scale(1.08);
+}
+.item-login h5 {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.tolink {
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--color-primary-variant) ; 
+}
+.register-here-btn {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    padding: 10px;
+    background-color: var(--color-primary-variant) ; 
+}
+#register p {
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+}
+@media only screen and (max-width : 1024px){
+    #login {
+        display: block;
+    }
+    .item-login {
+        margin-top: 2rem;
+        width: 100%;
+    }
+    .item-login img {
+        width: 100%;
+        height: 290px;
+    }
+}
+
+
+/* ---------------register----------------------- */
+.register {
+    margin-top: 0 !important;
+    text-align: center;
+    background: url('./login_register/bg-1.jpeg');
+    height: 460px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 0 !important;
+}
+#register {
+    background-color: transparent;
+    padding: 4rem;
+}
+#register .tolink {
+    margin: 1rem;
+}
+
+@media only screen and (max-width : 1300px){
+    .register {
+        height: 560px;
+    }
+}
+@media only screen and (max-width : 800px){
+    .register {
+        height: 660px;
+    }
+}
+@media only screen and (max-width : 700px){
+    .register {
+        height: max-content;
+    }
+    #register {
+        padding: 1rem;
+    }
+    .register-here {
+        margin:3rem 1rem;
+    }
+}
+/* ----------------registration forms ---------------------------------- */
+.register-div{
+    background-image: url('./login_register/background1.jpg');
+    background-repeat: no-repeat ;
+    background-size: 100% 100%;
+    padding-top: 1rem !important;
+    margin-top: 0 !important;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40%;
+    margin-bottom: 0 !important;
+}
+.login-div {
+    background-image: url('./login_register/bg-1.jpeg');
+}
+.register-div h3 {
+    text-align: center;
+}
+.student-reg , .teacher-reg , .school-reg{
+    border: 1px solid var(--color-primary-variant);
+    border-radius: 8px;
+    padding: 1rem;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    backdrop-filter: blur(15px);
+}
+.student-reg div ,  .teacher-reg div , .school-reg div {
+    margin: 0 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.student-reg div input , 
+.student-reg div select , 
+.teacher-reg div input , 
+.teacher-reg div select , 
+.school-reg input , 
+.school-reg select{
+    background-color: aliceblue;
+    width: 60%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.student-reg .submit , .teacher-reg .submit , .school-reg .submit{
+    background-color: var(--color-primary-variant);
+    width: 100%;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 17px;
+}
+.submit:hover{
+    border: 1px solid var(--color-primary-variant);
+    background-color: transparent;
+    color: black;
+    backdrop-filter: blur(15px);
+}
+@media only screen and (max-width : 1024px){
+    .register-div{
+        grid-template-columns: 90%;
+    }
+    .student-reg div input , 
+    .student-reg div select , 
+    .teacher-reg div input , 
+    .teacher-reg div select , 
+    .school-reg input , 
+    .school-reg select{
+        background-color: aliceblue;
+        width: 65%;
+        padding: 0.5rem;
+        border-radius: 8px;
+        font-size: 17px;
+    }
+}
+
+/* -------------------login-------------------------------- */
+.img-login-div {
+    display: flex;
+    justify-content: center !important;
+}
+.login-img {
+    margin: 3rem 0;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}

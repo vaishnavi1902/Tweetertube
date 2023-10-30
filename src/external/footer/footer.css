@@ -44,6 +44,9 @@
     padding:1rem 0;
     font-size: 23px;
 }
+.footer .socials a {
+    color: white !important;
+}
 /* ---------------medium devices-------------------- */
 
 @media screen and (max-width: 1024px){   
@@ -53,10 +56,10 @@
         padding: 1rem 1rem;
         display: grid;
         grid-template-columns: 100%;
-        margin-top: 0 !important;
+        margin: 0 !important;
     }
     .description , .footer-links , .footer .socials ,.heading-footer {
-        padding:1rem;
+        padding:1rem !important;
     }
 }
 

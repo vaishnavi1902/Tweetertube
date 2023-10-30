@@ -21,7 +21,7 @@ const Instructor = () => {
         <AiOutlineRight style={{ height: "12px", width: "12px" }} />
         <a href="/">Become an Instructor</a>
       </div>
-      <section className="bgimage">
+      <section className="bgimage" id="instructor">
         <div className="overlay">
           <h1>
             <span>become</span> an Instructor &{" "}

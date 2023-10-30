@@ -84,3 +84,80 @@
 .react-multiple-carousel__arrow:hover {
     background-color: rgba(42, 198, 255, 0.191);
 }
+
+/* --------------- slider css -------------------- */
+
+.myslider-container {
+    width: 100%;  
+    margin-top: 0px;
+}
+.my-slide {
+    width: 100%;
+}
+.my-slide .slide-img {
+    background-size: cover;
+    width: 100%;
+}
+.my-slide .slide-text {
+    position: absolute;
+    top: 280px;
+    left: 60px;
+    color: var(--color-white);
+    line-height: 2.5;
+}
+.slide-text .slide-head {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.slide-text .slide-para {
+    font-weight: 400;
+    margin-bottom: 13px;
+}
+.slide-text .slide-btn {
+    background-color: var(--color-bg-variant);
+    color: var(--color-white);
+    outline: transparent;
+    border: transparent;
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+.slide-text .slide-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-bg);
+    transition: var(--transition);
+    border: 1px solid var(--color-bg);
+}
+
+
+/* ---------------- category style -------------- */
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.category {
+    background-color: rgba(240, 240, 240, 0.754);
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: var(--color-primary-variant);
+}
+
+.course {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: var(--color-bg-variant);
+    cursor: pointer;
+}
