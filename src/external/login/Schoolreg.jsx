@@ -1,38 +1,84 @@
+import { useState } from "react"
+import axios from "axios"
+import { toast } from "react-hot-toast"
+import { useNavigate } from "react-router-dom"
 
 const Schoolreg = () => {
+  const navigate = useNavigate()
+  const [data, setData] = useState({
+    sname: '',
+    branch: '',
+    addres: '',
+    pincode: 0,
+    mobile: 0,
+    email: '',
+    state: '',
+    password: '',
+  })
+
+  const RegisterSchool = async (e) => {
+    e.preventDefault()
+    const { sname, branch, addres, pincode, mobile, email, state, password } = data
+    try {
+      const { data } = await axios.post('/registerSchool', {
+        sname, branch, addres, pincode, mobile, email, state, password
+      })
+      if (data.error) {
+        toast.error(data.error)
+      } else {
+        setData({})
+        toast.success('Login successfull welcome!')
+        navigate('/login')
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <>
-    <section className="register-div"  id="regiter-form">
-      <div className="">
+      <section className="register-div" id="regiter-form">
+        <div className="">
           <h3>Register for School</h3>
-          <form className="school-reg">
+          <form className="school-reg" onSubmit={RegisterSchool}>
             <div>
               <label htmlFor="schoolname">School name</label>
-              <input type="text" id="schoolname" placeholder="enter School name" name="schoolname" required/>
+              <input type="text" id="schoolname" placeholder="enter School name" name="schoolname"
+                value={data.sname} onChange={(e) => setData({ ...data, sname: e.target.value })}
+                required />
             </div>
             <div>
               <label htmlFor="branch">School Branch</label>
-              <input type="text" id="branch" placeholder="enter Branch of School"  name="branch" required/>
+              <input type="text" id="branch" placeholder="enter Branch of School" name="branch"
+                value={data.branch} onChange={(e) => setData({ ...data, branch: e.target.value })}
+                required />
             </div>
             <div>
               <label htmlFor="address">Address </label>
-              <input type="text" id="address" placeholder="enter full address of school"  name="address" required/>
+              <input type="text" id="address" placeholder="enter full address of school" name="address"
+                value={data.address} onChange={(e) => setData({ ...data, address: e.target.value })}
+                required />
             </div>
             <div>
               <label htmlFor="pincode">Pincode</label>
-              <input type="number" id="pincode" placeholder="enter pincode"  name="pincode" required/>
+              <input type="number" id="pincode" placeholder="enter pincode" name="pincode"
+                value={data.pincode} onChange={(e) => setData({ ...data, pincode: e.target.value })}
+                required />
             </div>
             <div>
               <label htmlFor="mobile">Mobile</label>
-              <input type="number" id="mobile" placeholder="enter mobile"  name="mobile" required/>
+              <input type="number" id="mobile" placeholder="enter mobile" name="mobile"
+                value={data.mobile} onChange={(e) => setData({ ...data, mobile: e.target.value })}
+                required />
             </div>
             <div>
               <label htmlFor="email">Email</label>
-              <input type="text" id="email" placeholder="enter email"  name="email" required/>
+              <input type="text" id="email" placeholder="enter email" name="email"
+                value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })}
+                required />
             </div>
             <div>
-             <label htmlFor="City">State</label>
-             <select name="state" id="state">
+              <label htmlFor="City">State</label>
+              <select name="state" id="state" value={data.state} onChange={(e) => setData({ ...data, state: e.target.value })}>
                 <option value="Andhra Pradesh">Select State</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -72,18 +118,20 @@ const Schoolreg = () => {
                 <option value="West Bengal">West Bengal</option>
               </select>
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="licence">Upload School Licence</label>
-              <input type="file" id="licence" name="licence"  required/>
-            </div>
+              <input type="file" id="licence" name="licence" required />
+            </div> */}
             <div>
               <label htmlFor="password">Enter Password </label>
-              <input type="password" placeholder="Enter the password" id="password" name="password"/>
+              <input type="password" placeholder="Enter the password" id="password" name="password"
+                value={data.password} onChange={(e) => setData({ ...data, password: e.target.value })}
+              />
             </div>
             <input type="submit" className="submit" value="Submit" />
           </form>
-      </div>
-    </section></>
+        </div>
+      </section></>
   )
 }
 
