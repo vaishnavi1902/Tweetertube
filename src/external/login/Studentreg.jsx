@@ -20,7 +20,7 @@ const Studentreg = () => {
     e.preventDefault()
     const { fname, mname, lname, adhar, age, gender, ayear, password } = data
     try {
-      const { data } = await axios.post('http://localhost:9000/register', {
+      const { data } = await axios.post('/register', {
         fname, mname, lname, adhar, age, gender, ayear, password
       })
       if (data.error) {

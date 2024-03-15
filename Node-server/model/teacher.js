@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose
-const userSchema = new Schema({
+
+const teacherSchema = new Schema({
     fname: String,
     mname: String,
     lname: String,
@@ -10,18 +11,14 @@ const userSchema = new Schema({
         type: Number,
         unique: true
     },
+    mobile: Number,
+    email: String,
     age: Number,
     gender: String,
-    ayear: Number,
-    // name: String,
-    // email: {
-    //     type: String,
-    //     unique: true
-    // },
-    password: String
+    // certificate: String,
+    proefficiency: Number,
+    password: String,
 })
-const UserModel = mongoose.model('student', userSchema);
-
-
-module.exports = UserModel;
+const TeacherModel = mongoose.model('teacher', teacherSchema);
+module.exports = TeacherModel;
 

@@ -5,17 +5,19 @@ import Ourportal from "./Ourportal"
 import Teaching from './Teaching'
 import Schools from "./Schools"
 import Peoplessay from "./Peoplessay"
+
 import './welcome.css'
 const Welcomee = () => {
+
   return (
-    <> 
-     <Slider/>
-     <PopularCourses/>
-     <Categories/>
-     <Ourportal/>
-     <Teaching/>
-     <Schools/>
-     <Peoplessay/>
+    <>
+      <Slider />
+      <PopularCourses />
+      <Categories />
+      <Ourportal />
+      <Teaching />
+      <Schools />
+      <Peoplessay />
     </>
   )
 }

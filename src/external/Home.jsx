@@ -14,9 +14,17 @@ import Schoollogin from "./login/Schoollogin";
 import Studentreg from "./login/Studentreg";
 import Teacherreg from "./login/Teacherreg";
 import Schoolreg from "./login/Schoolreg";
+import Dashbord from "./Dashbord/Dashbord";
+import { UserContextProvider } from '../context/UserContext';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'http://localhost:9000';
+axios.defaults.withCredentials = true;
+
 const Home = () => {
   return (
-    <>
+
+    <UserContextProvider>
       <Router>
         <Nav />
         <Routes>
@@ -33,10 +41,13 @@ const Home = () => {
           <Route path="/studentreg" element={<Studentreg />} />
           <Route path="/teacherreg" element={<Teacherreg />} />
           <Route path="/schoolreg" element={<Schoolreg />} />
+          <Route path="/dashbord" element={<Dashbord />} />
+
         </Routes>
         <Footer />
       </Router>
-    </>
+    </UserContextProvider>
+
   );
 };
 

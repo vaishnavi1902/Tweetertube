@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from 'axios';
 import { toast } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import dashbord from '../Dashbord/Dashbord';
 const Studentlogin = () => {
   const navigate = useNavigate()
   const [data, setData] = useState({
@@ -13,7 +14,7 @@ const Studentlogin = () => {
     e.preventDefault()
     const { adhar, password } = data
     try {
-      const { data } = await axios.post('http://localhost:9000/login', {
+      const { data } = await axios.post('/login', {
         adhar,
         password
       });
@@ -21,7 +22,7 @@ const Studentlogin = () => {
         toast.error(data.error)
       } else {
         setData({})
-        navigate('/')
+        navigate('/dashbord')
       }
     } catch (error) {
       console.log(error)
