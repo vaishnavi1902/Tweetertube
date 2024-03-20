@@ -2,6 +2,8 @@ import "./contact.css";
 import { AiOutlineRight } from "react-icons/ai";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
+import Nav from "../nav/Nav"
+import Footer from "../footer/Footer"
 const Contact = () => {
   const form = useRef();
 
@@ -27,6 +29,7 @@ const Contact = () => {
   };
   return (
     <>
+    <Nav/>
       <div className="linktag">
         <a href="/">Home </a>{" "}
         <AiOutlineRight style={{ height: "12px", width: "12px" }} />
@@ -92,6 +95,7 @@ const Contact = () => {
           </div>
         </form>
       </section>
+      <Footer/>
     </>
   );
 };

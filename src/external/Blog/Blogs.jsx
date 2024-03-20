@@ -1,4 +1,5 @@
 import blog from "./blog.json";
+
 const Blogs = () => {
   const bdata = blog.map((item) => {
     return (

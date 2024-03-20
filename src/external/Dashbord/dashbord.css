@@ -1,0 +1,15 @@
+.user-info {
+    display: flex;
+    margin:2rem;
+}
+.user-info img {
+    width: 200px;
+    height: 200px;
+    margin:0rem 2rem;
+}
+.user-info h5 {
+    font-size: 20px;
+}
+.user-info span {
+    color: blue;
+}
