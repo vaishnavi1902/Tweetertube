@@ -5,7 +5,8 @@ import { BsCamera } from "react-icons/bs";
 import { AiOutlineRight } from "react-icons/ai";
 import { BiMessageAltAdd } from "react-icons/bi";
 import { BsPeople } from "react-icons/bs";
-
+import Nav from "../nav/Nav"
+import Footer from "../footer/Footer"
 const Instructor = () => {
   const [toggle, setToggle] = useState(1);
 
@@ -15,7 +16,7 @@ const Instructor = () => {
   return (
     <>
       {/* first section */}
-
+      <Nav/>
       <div className="linktag">
         <a href="/">Home </a>{" "}
         <AiOutlineRight style={{ height: "12px", width: "12px" }} />
@@ -176,6 +177,7 @@ const Instructor = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

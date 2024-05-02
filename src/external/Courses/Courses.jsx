@@ -1,10 +1,12 @@
 import "./courses.css";
 import { AiOutlineRight } from "react-icons/ai";
 import image from "./../../assets/bg-3.jpg";
-
+import Nav from "../nav/Nav"
+import Footer from "../footer/Footer"
 const Courses = () => {
   return (
     <>
+    <Nav />
       <div className="linktag">
         <a href="/">Home </a>{" "}
         <AiOutlineRight style={{ height: "12px", width: "12px" }} />
@@ -65,6 +67,7 @@ const Courses = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };
