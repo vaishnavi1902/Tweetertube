@@ -2,33 +2,40 @@ import { useState } from "react"
 import axios from "axios"
 import { toast } from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import './login.css'
 const Register = () => {
   const navigate = useNavigate()
   const [data, setData] = useState({
-    fname: '',
-    mname: '',
-    lname: '',
-    adhar: 0,
-    age: 0,
-    gender: '',
-    ayear: 0,
+    Username: '',
+    email: '',
+    fullName: '',
     password: '',
   })
+  // console.log(avatar);
 
   const RegisterStudent = async (e) => {
     e.preventDefault()
-    const { fname, mname, lname, adhar, age, gender, ayear, password } = data
+    const { Username, email, fullName, password } = data;
+  
+    const fd = new FormData()
+    fd.append('username', Username)
+    fd.append('email', email)
+    fd.append('fullName', fullName)
+    fd.append('avatar', data.avatar)
+    fd.append('coverImage', data.coverImage)
+    fd.append('password', password)
+
+    
     try {
-      const { data } = await axios.post('/register', {
-        fname, mname, lname, adhar, age, gender, ayear, password
-      })
+      const { data } = await axios.post('/api/v1/users/register',fd)
       if (data.error) {
         toast.error(data.error)
+        console.log(data.error)
       } else {
         setData({})
         toast.success('Login successfull welcome!')
+        console.log("successful")
         navigate('/login')
       }
     } catch (error) {
@@ -42,36 +49,36 @@ const Register = () => {
           <h3>Register as Student</h3>
           <form className="student-reg" onSubmit={RegisterStudent}>
             <div>
-              <label htmlFor="fname">First name:</label>
-              <input type="text" id="fname" placeholder="enter first name" name="fname"
-                value={data.fname} onChange={(e) => setData({ ...data, fname: e.target.value })}
+              <label htmlFor="fname">UserName:</label>
+              <input type="text" id="fname" placeholder="enter Username" name="Username"
+                value={data.Username} onChange={(e) => setData({ ...data, Username: e.target.value })}
                 required />
             </div>
             <div>
-              <label htmlFor="mname">Middle name:</label>
-              <input type="text" id="mname" placeholder="enter middle name" name="mname"
-                value={data.mname} onChange={(e) => setData({ ...data, mname: e.target.value })}
+              <label htmlFor="mname">Email :</label>
+              <input type="text" id="mname" placeholder="enter email " name="email"
+                value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })}
                 required />
             </div>
             <div>
-              <label htmlFor="lname">Last name:</label>
-              <input type="text" id="lname" placeholder="enter last name" name="lname"
-                value={data.lname} onChange={(e) => setData({ ...data, lname: e.target.value })}
+              <label htmlFor="lname">Full Name</label>
+              <input type="text" id="lname" placeholder="enter Full Name" name="fullName"
+                value={data.fullName} onChange={(e) => setData({ ...data, fullName: e.target.value })}
                 required />
             </div>
             <div>
-              <label htmlFor="adhar">Adhar Number:</label>
-              <input type="number" id="adhar" placeholder="enter ADHAR card number" name="adhar"
-                value={data.adhar} onChange={(e) => setData({ ...data, adhar: e.target.value })}
+              <label htmlFor="adhar">avatar</label>
+              <input type="file" id="adhar"  name="avatar"
+                onChange={(e) => setData({ ...data, avatar: e.target.files[0] })}
                 required />
             </div>
             <div>
-              <label htmlFor="age">Age</label>
-              <input type="number" id="age" placeholder="enter age" name="age"
-                value={data.age} onChange={(e) => setData({ ...data, age: e.target.value })}
-                required />
+              <label htmlFor="age">coverImage </label>
+              <input type="file" id="age"  name="coverImage"
+                onChange={(e) => setData({ ...data, coverImage: e.target.files[0] })}
+           />
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="gender">Select Gender</label>
               <select name="gender" id="gender" value={data.gender} onChange={(e) => setData({ ...data, gender: e.target.value })}>
                 <option value="select">Select Your Gender</option>
@@ -84,8 +91,8 @@ const Register = () => {
               <label htmlFor="ayear">Academic Year (Optional)</label>
               <input type="number" id="ayear" placeholder="enter Academic year" name="ayear"
                 value={data.ayear} onChange={(e) => setData({ ...data, ayear: e.target.value })} />
-            </div>
-            <div>
+  </div> */}
+            <div> 
               <label htmlFor="password">Enter Password </label>
               <input type="password" placeholder="Enter the password" id="password" name="password"
                 value={data.password} onChange={(e) => setData({ ...data, password: e.target.value })}
@@ -93,10 +100,8 @@ const Register = () => {
             </div>
             <input type="submit" className="submit" value="submit" />
           </form>
-          <h3 className='register-here'>Already a member of Shikshasankalp ? <Link to="/login" className="register-here-btn" >Login here!</Link></h3>
         </div>
-      </section>
-      </>
+      </section></>
   )
 }
 

@@ -1,20 +1,23 @@
-import axios from 'axios';
-import { createContext, useEffect, useState } from 'react';
+// import axios from 'axios';
+import { createContext, useState } from 'react';
 
 export const UserContext = createContext({})
 
+// eslint-disable-next-line react/prop-types
 export function UserContextProvider({ children }) {
-    const [user, setUser] = useState(null);
-    useEffect(() => {
-        if (!user) {
-            axios.get('/profile').then(({ data }) => {
-                setUser(data)
-            })
-        }
-    }, [])
+    const [user, setUser] = useState(useState({
+        _id:'',
+        username: '',
+        email: '',
+        fullName: '',
+        avatar: '',
+        coverImage: '',
+        watchHistory: [],
+    }));
+
     return (
         <UserContext.Provider value={{ user, setUser }}>
             {children}
         </UserContext.Provider>
-    )
+    );
 }

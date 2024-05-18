@@ -1,0 +1,110 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* video */
+/* video.css */
+
+.Video {
+  /* Add some basic styling to the container */
+  /* max-width: 800px; */
+  margin: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Video h1 {
+  /* Make the title stand out */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.Video ul {
+  /* Remove default list styling */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Video li {
+  /* Add some spacing between list items */
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.Video img {
+  /* Make the thumbnails a bit larger */
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.Video a {
+  /* Make the video title links more prominent */
+  cursor: pointer;
+}
+
+.Video a:hover {
+  /* Add a hover effect to the links */
+  color: #23527c;
+}
+
+.Video video {
+  /* Make the video player responsive */
+  width: 100%;
+  height: 360px;
+  margin-bottom: 20px;
+}
+
+.Video h2 {
+  /* Make the video title more prominent */
+  font-size: 20px;
+  
+  margin-bottom: 10px;
+}
+
+.Video p {
+  /* Add some spacing between the video title and description */
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+.videos-page {
+  display: flex;
+}

@@ -1,11 +1,15 @@
 import student from './login_register/login-student.jpg'
-import { useState } from "react";
+import { useState , useContext } from "react";
 import axios from 'axios';
 import { toast } from "react-hot-toast";
 import {useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext';
+
+
 import './login.css'
 const Login = () => {
+  const { setUser } = useContext(UserContext)
   const navigate = useNavigate()
   const [data, setData] = useState({
     username: '',
@@ -25,6 +29,7 @@ const Login = () => {
         toast.error(data.error)
       } else {
         localStorage.setItem('user', JSON.stringify(data));
+        setUser({_id:data.data.user._id,username: data.data.user.username, fullName: data.data.user.fullName, email: data.data.user.email, coverImage: data.data.user.coverImage, avatar: data.data.user.avatar, watchHistory: data.data.user.watchHistory })
         navigate('/dashbord')
       }
     } catch (error) {
