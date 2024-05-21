@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
-import Navbar from '../Dashbord/Navbar';
+// import Navbar from '../Dashbord/Navbar';
 import Footer from '../footer/Footer';
-
+import { Link } from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
 const UpdateVideoForm = ({ videoId }) => {
   const [title, setTitle] = useState('');
@@ -30,8 +30,8 @@ const UpdateVideoForm = ({ videoId }) => {
 
   return (
    <>
-   <Navbar/>
-   <form onSubmit={handleSubmit}>
+   <button><Link to="/getvideos" className={'links btn'}>My Videos</Link></button>
+  <form onSubmit={handleSubmit}>
       <label htmlFor="title">Title:</label>
       <input
         type="text"

@@ -4,22 +4,25 @@ import{ useState } from 'react'
 import Translate from "../nav/Translate"
 import { AiOutlineMail , AiFillMobile} from 'react-icons/ai'
 import { useNavigate } from "react-router-dom"
+// import axios from "axios"
 const Navbar = () => {
     const [activeNav , setActiveNav] = useState('#');
     const navigate = useNavigate();
 
     const handleLogout = async () => {
         try {
-            const response = await fetch('v1/users/logout', {
+            // const response = await axios.get('/api/v1/users/history');
+            const response = await fetch('/api/v1/users/logout', {
                 method: 'POST',
             });
             if (response.ok) {
+                console.log("logout");
                 navigate('/login')
             } else {
-                console.error('Logout failed');
+                console.error('Logout failed 1');
             }
         } catch (error) {
-            console.error('Logout failed', error);
+            console.error('Logout failed 2', error);
         }
     };
 
@@ -33,8 +36,8 @@ const Navbar = () => {
     <div className="topnav" id="myTopnav">
         <div className="one">
             <li><Link to="/dashbord"  onClick={() => setActiveNav('#dashbord')} id="homeli" className={activeNav === '#dashbord' ? '' : ''}><img className="navimg" src="home1.png" alt=""/>Shiksha<span className="text-blue">Sankalp</span></Link></li>
-            <li className="all-li"><Link to="/videos" onClick={() => setActiveNav('#videos')}  className={activeNav === '#videos' ? 'active' : ''}>My Videos</Link></li>
-            <li className="all-li"><Link to="/updatevideo" onClick={() => setActiveNav('#updatevideo')}  className={activeNav === '#updatevideo' ? 'active' : ''}>Update Video</Link></li>
+            <li className="all-li"><Link to="/getvideos" onClick={() => setActiveNav('#getvideos')}  className={activeNav === '#getvideos' ? 'active' : ''}>My Videos</Link></li>
+            {/* <li className="all-li"><Link to="/updatevideo" onClick={() => setActiveNav('#updatevideo')}  className={activeNav === '#updatevideo' ? 'active' : ''}>Update Video</Link></li> */}
             <li className="all-li"><Link to="/uploadvideo" onClick={() => setActiveNav('#uploadvideo')}  className={activeNav === '#uploadvideo' ? 'active' : ''}>Upload Video</Link></li>
             <li className="all-li"><Link to="/acc" onClick={() => setActiveNav('#acc')}  className={activeNav === '#acc' ? 'active' : ''}>My Account</Link></li>
         </div>

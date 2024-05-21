@@ -1,0 +1,295 @@
+/* passss */
+.change-password-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .change-password-form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .change-password-form label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .change-password-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+  }
+  
+  .change-password-form input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+  }
+  
+  .change-password-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .change-password-form button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  
+  .change-password-form button[type="submit"]:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+  }
+  
+  .change-password-form p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  /* accc */
+
+  .update-account-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .update-account-form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .update-account-form label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .update-account-form input[type="text"],
+  .update-account-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+  }
+  
+  .update-account-form input[type="text"]:focus,
+  .update-account-form input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+  }
+  
+  .update-account-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .update-account-form button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  
+  .update-account-form button[type="submit"]:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+  }
+  
+  .update-account-form p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* coberimg */
+
+  .user-profile {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-profile h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .user-profile form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user-profile label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .user-profile input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+  }
+  
+  .user-profile input[type="file"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+  }
+  
+  .user-profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .user-profile button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .user-profile button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  
+  .user-profile button[type="submit"]:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+  }
+
+  /* avater */
+  .update-avatar-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .update-avatar-form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .update-avatar-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .update-avatar-form label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .update-avatar-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+  }
+  
+  .update-avatar-form input[type="file"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+  }
+  
+  .update-avatar-form img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .update-avatar-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .update-avatar-form button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  
+  .update-avatar-form button[type="submit"]:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+  }
+.edit {
+  background-color: #0062cc;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}

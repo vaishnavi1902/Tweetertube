@@ -13,9 +13,14 @@ import { UserContextProvider } from '../context/UserContext';
 import Dashbord from "./Dashbord/Dashbord";
 import Mycourses from "./Dashbord/Mycourses";
 import Video from "./videos/video";
+import Getvideobyid from "./videos/getvideobyid"
 import Account from "./Dashbord/Account";
 import App from "./videos/videouplod";
 import UpdateVideoForm from "./videos/UpdateVideoForm";
+import UpdateCoverImageForm from "./Dashbord/updateaccount/UpdateCoverImageForm"
+import UpdateAvatarForm from "./Dashbord/updateaccount/UpdateAvatarForm";
+import UpdateAccountForm from "./Dashbord/updateaccount/UpdateAccountForm";
+import ChangePasswordForm from './Dashbord/updateaccount/ChangePasswordForm'
 // import axios from 'axios';
 
 // axios.defaults.baseURL = 'http://localhost:8000/api/v1';
@@ -39,9 +44,13 @@ const Home = () => {
           <Route path="/mycourses" element={<Mycourses />} />
           <Route path="/videos" element={<Video/>}/>
           <Route path="/acc" element={<Account/>}/>
-          <Route path="/videos" element={<Video/>}/>
+          <Route path="/getvideos" element={<Getvideobyid/>}/>
           <Route path="/uploadvideo" element={<App/>}/>
           <Route path="/updatevideo" element={<UpdateVideoForm/>}/>
+          <Route path="/updatecover" element={<UpdateCoverImageForm/>}/>
+          <Route path="/updateavatar" element={<UpdateAvatarForm/>}/>
+          <Route path="/updateaccount" element={<UpdateAccountForm/>}/>
+          <Route path="/changepass" element={<ChangePasswordForm/>}/>
         </Routes>
       </Router>
     </UserContextProvider>

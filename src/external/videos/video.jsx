@@ -33,18 +33,18 @@ const Video = () => {
       console.error('Error adding video to watch history');
     }
   };
-  const handleDelete = async (videoId) => {
-  try {
-    const response = await axios.delete(`/api/v1/videos/${videoId}`);
-    if (response.status === 200) {
-      console.log('video deleted successfully');
-      alert("video deleted successfully");
-    }
-  }catch (error) {
-    console.error("error deleting video : ", error);
-    alert("error deleting video : ", error);
-  }
-  };
+  // const handleDelete = async (videoId) => {
+  // try {
+  //   const response = await axios.delete(`/api/v1/videos/${videoId}`);
+  //   if (response.status === 200) {
+  //     console.log('video deleted successfully');
+  //     alert("video deleted successfully");
+  //   }
+  // }catch (error) {
+  //   console.error("error deleting video : ", error);
+  //   alert("error deleting video : ", error);
+  // }
+  // };
   return (
     <>
     <Navbar/>
@@ -72,8 +72,8 @@ const Video = () => {
           </video>
           <h2>{currentVideo.title}</h2>
           <p>{currentVideo.description}</p>
-          <button className='btn' onClick={() => handleDelete(currentVideo._id)}>Delete Video</button>
-
+          {/* <button className='btn' onClick={() => handleDelete(currentVideo._id)}>Delete Video</button> */}
+          
         </div>
       )}
       </div>

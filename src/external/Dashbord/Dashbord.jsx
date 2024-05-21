@@ -1,11 +1,11 @@
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import "./dashbord.css"
-import Footer from '../footer/Footer';
+import Video from "../videos/video"
+// import Footer from '../footer/Footer';
 function Dashbord() {
     return (
         <div>
-            <Navbar/>
-            <Footer/>
+            <Video/>
         </div>
     )
 }

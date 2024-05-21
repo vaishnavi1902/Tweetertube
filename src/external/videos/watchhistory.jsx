@@ -4,9 +4,7 @@ import axios from 'axios';
 const WatchHistory = () => {
    const [watchHistory, setWatchHistory] = useState([]);
    const [error, setError] = useState(null);
-
-useEffect(() => { 
-  const fetchWatchHistory = async () => { 
+   const fetchWatchHistory = async () => { 
     try {
        const response = await axios.get('/api/v1/users/history');
         const data = response.data.data;
@@ -14,6 +12,8 @@ useEffect(() => {
         setWatchHistory(data); 
       }catch (error) { setError(error.message); } };
 
+useEffect(() => { 
+  
 fetchWatchHistory();
  }, []);
 

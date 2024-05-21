@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 
 
+
 import './login.css'
 const Login = () => {
   const { setUser } = useContext(UserContext)
@@ -24,12 +25,12 @@ const Login = () => {
         username,
         password
       });
-      console.log("hey");
+      console.log(data);
       if (data.error) {
         toast.error(data.error)
       } else {
         localStorage.setItem('user', JSON.stringify(data));
-        setUser({_id:data.data.user._id,username: data.data.user.username, fullName: data.data.user.fullName, email: data.data.user.email, coverImage: data.data.user.coverImage, avatar: data.data.user.avatar, watchHistory: data.data.user.watchHistory })
+        setUser({_id:data.data.user._id, fullName: data.data.user.fullName, email: data.data.user.email, coverImage: data.data.user.coverImage, avatar: data.data.user.avatar, watchHistory: data.data.user.watchHistory })
         navigate('/dashbord')
       }
     } catch (error) {

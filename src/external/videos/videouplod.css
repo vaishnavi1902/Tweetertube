@@ -108,3 +108,10 @@ button[type="submit"]:hover {
 .videos-page {
   display: flex;
 }
+.links {
+  font-size: 20px;
+  background-color: #23527c;
+  color: white;
+  font-weight: 700;
+  margin: 1rem;
+}
