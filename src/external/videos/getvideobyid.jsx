@@ -34,17 +34,7 @@ function getvideobyid() {
     };
     fetchVideo();
   }, []);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       const response = await axios.get('/api/v1/videos/');
-  //       setVideos(response.data.data);
-  //       console.log(response.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   })();
+
   // }, []);
   const handleVideoSelect = (video) => {
     setCurrentVideo(video);
@@ -84,7 +74,7 @@ function getvideobyid() {
     <>
     <Navbar />
     <div className='Video'>
-      <h1>Video</h1>
+      <h1>My Videos</h1>
       <div className="videos-page">
       <ul>
         {video.map((video) => (
@@ -108,7 +98,7 @@ function getvideobyid() {
           <h2>{currentVideo.title}</h2>
           <p>{currentVideo.description}</p>
           <button className='links btn' onClick={() => handleDelete(currentVideo._id)}>Delete Video</button>
-          <button><Link to="/updatevideo"  className={'links btn'}>Update Video</Link></button>
+          <button><Link to={`/updatevideo/${currentVideo._id}`}  className={'links btn'}>Update Video</Link></button>
         </div>
       )}
       </div>

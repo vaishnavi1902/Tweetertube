@@ -31,6 +31,7 @@ const Account = () => {
                 </div>
                 <button className="edit"><Link className="links" to="/updateaccount">Update Account Details</Link></button>
                 <button className="edit"><Link className="links" to="/changepass">Change Password</Link></button>
+                <button className="edit"><Link className="links" to="/mysubscribers">Subscribers</Link></button>
             </div>
             <WatchHistory/>
             <Footer/>

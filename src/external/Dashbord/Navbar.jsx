@@ -40,6 +40,9 @@ const Navbar = () => {
             {/* <li className="all-li"><Link to="/updatevideo" onClick={() => setActiveNav('#updatevideo')}  className={activeNav === '#updatevideo' ? 'active' : ''}>Update Video</Link></li> */}
             <li className="all-li"><Link to="/uploadvideo" onClick={() => setActiveNav('#uploadvideo')}  className={activeNav === '#uploadvideo' ? 'active' : ''}>Upload Video</Link></li>
             <li className="all-li"><Link to="/acc" onClick={() => setActiveNav('#acc')}  className={activeNav === '#acc' ? 'active' : ''}>My Account</Link></li>
+            <li className="all-li"><Link to="/tweets" onClick={() => setActiveNav('#tweets')}  className={activeNav === '#tweets' ? 'active' : ''}>Tweets</Link></li>
+            <li className="all-li"><Link to="/getusertweets" onClick={() => setActiveNav('#getusertweets')}  className={activeNav === '#getusertweets' ? 'active' : ''}>My Tweets</Link></li>
+            <li className="all-li"><Link to="/subscriptions" onClick={() => setActiveNav('#subscriptions')}  className={activeNav === '#subscriptions' ? 'active' : ''}>My Subscriptions</Link></li>
         </div>
         <div className="two">
             <li  onClick={handleLogout}  className={activeNav === '#login' ? 'active' : ''}><Link to="/login" className="loginbtn btn">Logout</Link></li>

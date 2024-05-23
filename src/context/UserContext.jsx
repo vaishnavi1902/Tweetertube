@@ -14,6 +14,7 @@ export function UserContextProvider({ children }) {
     avatar: '',
     coverImage: '',
     watchHistory: [],
+    createdAt: '',
   });
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export function UserContextProvider({ children }) {
       if (data.error) {
         toast.error(data.error);
       } else {
-        localStorage.setItem('user', JSON.stringify(data.data));
+        // localStorage.setItem('user', JSON.stringify(data.data));
         setUser({
           _id: data.data._id,
           username : data.data.username,
@@ -31,6 +32,7 @@ export function UserContextProvider({ children }) {
           coverImage: data.data.coverImage,
           avatar: data.data.avatar,
           watchHistory: data.data.watchHistory,
+          createdAt : data.data.createdAt
         });
       }
     };

@@ -1,0 +1,54 @@
+.all-tweets div , .tweets{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 20px;
+        background-color: aliceblue;
+}
+.updatetweet-btn {
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgb(168, 201, 230);
+    font-weight: 800;
+}
+.updatearea{
+    border: 1px solid gray;
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.mytweets-btn  , .newtweet-btn{
+    font-size: 20px;
+    background-color: #88c3f6;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 700;
+    margin: 1rem;
+}
+.text {
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid gray;
+}
+.avatar1 {
+    height: 25px;
+    width: 25px; 
+    border-radius: 50%;
+    margin: 5px;
+    align-self: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+.tweetcontent {
+    background-color: black;
+    color: #88c3f6;
+    padding: 10px;
+    border-radius: 10px;
+}
+.space {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}

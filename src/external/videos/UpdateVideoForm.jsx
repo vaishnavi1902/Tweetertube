@@ -3,30 +3,38 @@ import axios from 'axios';
 // import Navbar from '../Dashbord/Navbar';
 import Footer from '../footer/Footer';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
-const UpdateVideoForm = ({ videoId }) => {
+const UpdateVideoForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [thumbnail, setThumbnail] = useState(null);
   const [message, setMessage] = useState('');
+  const { videoId } = useParams()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     try {
       const formData = new FormData();
       formData.append('title', title);
       formData.append('description', description);
-      if (thumbnail) {
-        formData.append('thumbnail', thumbnail);
-      }
+      
+      formData.append('thumbnail', thumbnail);
+      console.log(formData);
+      const config = {
+        headers: {
+          "content-type": "multipart/form-data",
+        },
+      };
 
-      const response = await axios.patch(`/api/v1/videos/${videoId}`, formData);
+      const response = await axios.patch(`/api/v1/videos/${videoId}`, formData , config);
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response.data.message);
     }
   };
+
 
   return (
    <>

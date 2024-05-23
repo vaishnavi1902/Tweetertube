@@ -5,10 +5,11 @@ import { toast } from "react-hot-toast";
 import {useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
-
+import Nav from '../nav/Nav'
 
 
 import './login.css'
+import Footer from '../footer/Footer';
 const Login = () => {
   const { setUser } = useContext(UserContext)
   const navigate = useNavigate()
@@ -29,8 +30,8 @@ const Login = () => {
       if (data.error) {
         toast.error(data.error)
       } else {
-        localStorage.setItem('user', JSON.stringify(data));
-        setUser({_id:data.data.user._id, fullName: data.data.user.fullName, email: data.data.user.email, coverImage: data.data.user.coverImage, avatar: data.data.user.avatar, watchHistory: data.data.user.watchHistory })
+        // localStorage.setItem('user', JSON.stringify(data));
+        setUser({_id:data.data.user._id, fullName: data.data.user.fullName,username: data.data.user.username, email: data.data.user.email, coverImage: data.data.user.coverImage, avatar: data.data.user.avatar, watchHistory: data.data.user.watchHistory , createdAt: data.data.user.createdAt })
         navigate('/dashbord')
       }
     } catch (error) {
@@ -41,9 +42,10 @@ const Login = () => {
   return (
 
     <>
+    <Nav/>
       <section className="register-div login-div" id="regiter-form">
         <div className="">
-          <h3>Login for Student</h3>
+          <h3>Login</h3>
           <form className="school-reg" onSubmit={LoginsUser}>
             <div className="img-login-div">
               <img src={student} alt="" className='login-img' />
@@ -66,6 +68,7 @@ const Login = () => {
           <h3 className='register-here'>Not a member of Shikshasankalp ? <Link to="/register" className="register-here-btn" >Regester here !</Link></h3>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

@@ -21,6 +21,13 @@ import UpdateCoverImageForm from "./Dashbord/updateaccount/UpdateCoverImageForm"
 import UpdateAvatarForm from "./Dashbord/updateaccount/UpdateAvatarForm";
 import UpdateAccountForm from "./Dashbord/updateaccount/UpdateAccountForm";
 import ChangePasswordForm from './Dashbord/updateaccount/ChangePasswordForm'
+import UserChannelProfile from "./videos/UserChannelProfile";
+import Tweets from "./Dashbord/tweeter/Tweets";
+import UpdateTweet from "./Dashbord/tweeter/UpdateTweet";
+import GetUserTweets from "./Dashbord/tweeter/GetUserTweets";
+import CreateTweet from "./Dashbord/tweeter/CreateTweet";
+import Subscribers from "./subscriber/Subscribers";
+import Subscriptions from "./subscriber/Subscriptions";
 // import axios from 'axios';
 
 // axios.defaults.baseURL = 'http://localhost:8000/api/v1';
@@ -46,11 +53,18 @@ const Home = () => {
           <Route path="/acc" element={<Account/>}/>
           <Route path="/getvideos" element={<Getvideobyid/>}/>
           <Route path="/uploadvideo" element={<App/>}/>
-          <Route path="/updatevideo" element={<UpdateVideoForm/>}/>
+          <Route path="/updatevideo/:videoId" element={<UpdateVideoForm/>}/>
           <Route path="/updatecover" element={<UpdateCoverImageForm/>}/>
           <Route path="/updateavatar" element={<UpdateAvatarForm/>}/>
           <Route path="/updateaccount" element={<UpdateAccountForm/>}/>
           <Route path="/changepass" element={<ChangePasswordForm/>}/>
+          <Route path="/userprofile/:username" element={<UserChannelProfile/>} />
+          <Route path="/tweets" element={<Tweets/>}/>
+          <Route path="/updatetweet/:tweetId" element={<UpdateTweet/>}/>
+          <Route path="/getusertweets/" element={<GetUserTweets/>}/>
+          <Route path="/createtweet" element={<CreateTweet/>}/>
+          <Route path="/mysubscribers" element={<Subscribers/>}/>
+          <Route path="/subscriptions" element={<Subscriptions/>}/>
         </Routes>
       </Router>
     </UserContextProvider>

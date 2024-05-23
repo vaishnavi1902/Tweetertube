@@ -4,11 +4,13 @@ import "./videouplod.css"
 import Footer from '../footer/Footer';
 import Navbar from '../Dashbord/Navbar';
 import { UserContext } from '../../context/UserContext';
+import { Link } from 'react-router-dom';
 const Video = () => {
   const [videos, setVideos] = useState([]);
   const [currentVideo, setCurrentVideo] = useState(null);
+  const [IsSubscribed,setIsSubscribed] =useState(false);
+  // const [currentuser , setcurrentuser] = useState(null)
   const { user } = useContext(UserContext);
-
   useEffect(() => {
     (async () => {
       try {
@@ -22,6 +24,7 @@ const Video = () => {
   }, []);
 
   const handleVideoSelect = (video) => {
+    console.log(video);
     setCurrentVideo(video);
     addToWatchHistory(currentVideo._id,user._id)
   };
@@ -33,23 +36,20 @@ const Video = () => {
       console.error('Error adding video to watch history');
     }
   };
-  // const handleDelete = async (videoId) => {
-  // try {
-  //   const response = await axios.delete(`/api/v1/videos/${videoId}`);
-  //   if (response.status === 200) {
-  //     console.log('video deleted successfully');
-  //     alert("video deleted successfully");
-  //   }
-  // }catch (error) {
-  //   console.error("error deleting video : ", error);
-  //   alert("error deleting video : ", error);
-  // }
-  // };
+  const toggleSubscription = async (channelId) => {
+    try {
+      const response = await axios.post(`/api/v1/subscriptions/c/${channelId}`);
+      console.log(response);
+      setIsSubscribed(response.data.data.isSubscribed);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <>
     <Navbar/>
     <div className="Video">
-      <h1>Videos</h1>
+      <h1>All Videos</h1>
       <div className="videos-page">
       <ul>
         {videos.map((video) => (
@@ -58,7 +58,9 @@ const Video = () => {
             {/* <button onClick={()=> }></button> */}
            <div>
            <h2>{video.title}</h2>
+           {/* <button className='profile-btn'><img src={user.avatar} /><Link to={`/userprofile/${user.username}`}  className={'profile-link'}>{user.username}</Link></button> */}
             <p>{video.description}</p>
+            {!IsSubscribed && ( <button onClick={() => toggleSubscription(video.owner[0]._id)}>Subscribe </button>)}
            </div>
           </li>
         ))}
@@ -70,10 +72,9 @@ const Video = () => {
             <source src={currentVideo.videoFile} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <button  className='profile-btn'><img src={currentVideo.owner[0].avatar} /><Link to={`/userprofile/${currentVideo.owner[0].username}`}  className={'profile-link'}>{currentVideo.owner[0].username}</Link></button>
           <h2>{currentVideo.title}</h2>
-          <p>{currentVideo.description}</p>
-          {/* <button className='btn' onClick={() => handleDelete(currentVideo._id)}>Delete Video</button> */}
-          
+          <p>{currentVideo.description}</p>        
         </div>
       )}
       </div>

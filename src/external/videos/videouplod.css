@@ -67,7 +67,7 @@ button[type="submit"]:hover {
   display: flex;
 }
 
-.Video img {
+.Video img , .thumbnail{
   /* Make the thumbnails a bit larger */
   width: 200px;
   height: 130px;
@@ -114,4 +114,36 @@ button[type="submit"]:hover {
   color: white;
   font-weight: 700;
   margin: 1rem;
+}
+.profile-btn img{
+  width: 30px !important;
+  height: 30px !important; 
+  align-self: center;
+  vertical-align: middle;
+}
+.profile-btn {
+  vertical-align: middle;
+  background-color: #c6e7fa;
+}
+.profile-link{
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.coverimage {
+  width: 100%;
+  height: 200px;
+}
+.flex{
+  display: grid;
+  grid-template-columns: 30% 50%;
+  background-color: rgb(234, 249, 255);
+}
+.avatar {
+  height: 600px;
+}
+.info {
+  background-color: rgb(135, 221, 255);
+  padding: 40px;
+  box-shadow:rgb(16, 49, 65) 10px 15px 15px;
 }
