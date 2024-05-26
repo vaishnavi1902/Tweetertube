@@ -1,0 +1,24 @@
+.commentform{
+    display: flex !important;
+}
+.commentform button {
+    background-color: black;
+}
+.commentform input {
+    width: 100%;
+    margin: 0;
+}
+.avatar3 {
+    height: 30px !important; 
+    width: 30px !important;
+    vertical-align: middle;
+    border-radius: 50% !important;
+}
+.content-coment {
+    background-color: rgb(25, 38, 49);
+    color: white;
+    margin-top: 10px;
+    margin-left: 32px;
+    padding: 10px;
+    width: 800px;
+}

@@ -12,8 +12,8 @@ function App() {
   const [description, setDescription] = useState("");
   const [duration, setDuration] = useState("");
   const { user } = useContext(UserContext);
-  const [videoFile, setVideoFile] = useState(null);
-  const [thumbnail, setThumbnail] = useState(null);
+  const [videoFile, setVideoFile] = useState();
+  const [thumbnail, setThumbnail] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

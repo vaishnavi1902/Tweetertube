@@ -22,6 +22,7 @@ import UpdateAvatarForm from "./Dashbord/updateaccount/UpdateAvatarForm";
 import UpdateAccountForm from "./Dashbord/updateaccount/UpdateAccountForm";
 import ChangePasswordForm from './Dashbord/updateaccount/ChangePasswordForm'
 import UserChannelProfile from "./videos/UserChannelProfile";
+import UserChannelProfile1 from "./Dashbord/tweeter/UserChannelProfile1";
 import Tweets from "./Dashbord/tweeter/Tweets";
 import UpdateTweet from "./Dashbord/tweeter/UpdateTweet";
 import GetUserTweets from "./Dashbord/tweeter/GetUserTweets";
@@ -59,6 +60,7 @@ const Home = () => {
           <Route path="/updateaccount" element={<UpdateAccountForm/>}/>
           <Route path="/changepass" element={<ChangePasswordForm/>}/>
           <Route path="/userprofile/:username" element={<UserChannelProfile/>} />
+          <Route path="/userprofile1/:username" element={<UserChannelProfile1/>} />
           <Route path="/tweets" element={<Tweets/>}/>
           <Route path="/updatetweet/:tweetId" element={<UpdateTweet/>}/>
           <Route path="/getusertweets/" element={<GetUserTweets/>}/>

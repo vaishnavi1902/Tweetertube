@@ -73,7 +73,7 @@ const GetUserTweets = () => {
             </div>
             <p className='tweetcontent'>{tweet.content}</p>
             <p>Tweet Id : {tweet._id}</p>
-            <button className='deletetweet-btn' onClick={() => handleDeleteTweet(tweet._id)}>
+            <button className='deletetweet-btn updatetweet-btn' onClick={() => handleDeleteTweet(tweet._id)}>
         <FaTrash/>Delete Tweet
       </button>
             {/* Add more tweet properties as needed */}

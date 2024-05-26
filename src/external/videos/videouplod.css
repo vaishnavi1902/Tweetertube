@@ -100,7 +100,7 @@ button[type="submit"]:hover {
   margin-bottom: 10px;
 }
 
-.Video p {
+.Video p{
   /* Add some spacing between the video title and description */
   margin-bottom: 20px;
   max-width: 250px;
@@ -120,10 +120,12 @@ button[type="submit"]:hover {
   height: 30px !important; 
   align-self: center;
   vertical-align: middle;
+  border-radius: 50%;
+  margin-bottom: 5px;
 }
 .profile-btn {
   vertical-align: middle;
-  background-color: #c6e7fa;
+  background-color: #ffffff00;
 }
 .profile-link{
   padding: 20px;
@@ -146,4 +148,16 @@ button[type="submit"]:hover {
   background-color: rgb(135, 221, 255);
   padding: 40px;
   box-shadow:rgb(16, 49, 65) 10px 15px 15px;
+}
+.space-between {
+  justify-content: space-between;
+}
+.likesandnumber {
+  display: flex;
+}
+.num {
+   font-size: 20px;
+   font-weight: 600;
+   margin-left: 20px;
+   margin-top: 10px;
 }

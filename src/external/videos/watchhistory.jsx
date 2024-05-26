@@ -26,14 +26,14 @@ return (
   <div className="container"> 
   <h1> Your Watch History</h1> 
     <ul> 
-      {watchHistory.map((video)=>( <li key={video._id}>
+      {watchHistory && (watchHistory.map((video)=>( <li key={video._id}>
         <img className='thumbnail' src={video.thumbnail} alt="" />
         <p>Title: {video.title} </p>
         <p>Owner: {video.owner.fullName}</p>
           <p>Duration: {video.duration} seconds</p> 
           </li>
         ))
-      }
+      )}
     </ul>
   </div>
 </> 

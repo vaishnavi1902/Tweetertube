@@ -4,11 +4,19 @@ import{ useState } from 'react'
 import Translate from "../nav/Translate"
 import { AiOutlineMail , AiFillMobile} from 'react-icons/ai'
 import { useNavigate } from "react-router-dom"
+import { CgMoreO } from 'react-icons/cg'
 // import axios from "axios"
 const Navbar = () => {
     const [activeNav , setActiveNav] = useState('#');
     const navigate = useNavigate();
-
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
     const handleLogout = async () => {
         try {
             // const response = await axios.get('/api/v1/users/history');
@@ -47,6 +55,7 @@ const Navbar = () => {
         <div className="two">
             <li  onClick={handleLogout}  className={activeNav === '#login' ? 'active' : ''}><Link to="/login" className="loginbtn btn">Logout</Link></li>
         </div>
+        <a href="javascript:void(0);" className="icon" onClick={myFunction}><CgMoreO/></a>
     </div>
     </>
   )

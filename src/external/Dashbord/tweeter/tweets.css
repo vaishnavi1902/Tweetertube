@@ -52,3 +52,10 @@
     justify-content: space-between;
     margin-bottom: 5px;
 }
+.likestweet {
+    display: flex;
+    border: 0px solid rgba(0, 0, 0, 0) !important;
+    margin: -5px !important;
+    padding: -5px !important;
+    background-color: rgba(240, 248, 255, 0) !important;
+}
