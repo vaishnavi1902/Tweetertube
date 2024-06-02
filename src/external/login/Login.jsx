@@ -22,7 +22,7 @@ const Login = () => {
     const { username, password } = data;
     try {
       // console.log("hey");
-      const { data } = await axios.post('/api/v1/users/login', {
+      const { data } = await axios.post('https://shikshasankalp-backend.onrender.com/api/v1/users/login', {
         username,
         password
       });
