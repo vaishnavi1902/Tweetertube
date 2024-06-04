@@ -9,5 +9,6 @@ export default defineConfig({
       '/api/v1' : 'https://shikshasankalp-backend.onrender.com',
      }
   },
+  base : "/Tweetertube/",
   plugins: [react()],
 })
